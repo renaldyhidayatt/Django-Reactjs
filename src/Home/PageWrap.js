@@ -48,7 +48,7 @@ class PageWrap extends Component{
         <AppBar color="default" elevation={0}  className={classes.appBar}>
           <Toolbar className={classes.toolbar}>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-              <Link component={MaterialLink} variant="button" color="textPrimary" className={classes.link}>
+              <Link to="/" component={MaterialLink} variant="button" color="textPrimary" className={classes.link}>
                 Tester
               </Link>
             </Typography>

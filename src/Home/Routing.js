@@ -1,17 +1,21 @@
 import React, { Component } from "react";
-import { Switch } from "react-router-dom";
+import { Switch, withRouter } from "react-router-dom";
 import PropsRoute from "../route/PropsRoute";
 import Home from "./Home";
+import Register from "./Register";
+import Login from "./Login";
 
 class Routing extends Component{
   render(){
     return(
       <Switch>
         <PropsRoute path="/" component={Home} />
+        <PropsRoute path="/register" componet={Register} />
+        <PropsRoute path="/login" componet={Login} />
       </Switch>
     )
   }
 }
 
 
-export default Routing;
+export default withRouter(Routing);

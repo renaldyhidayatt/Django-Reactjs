@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import theme from "./theme";
 import GlobalStyles from "./GlobalStyles";
 import Pace from "./Common/Pace";
+import PrivateRoute from "./route/PrivateRoute";
+
+
 
 const Dashboard = lazy(() => import("./Dashboard/Main"));
 
@@ -26,9 +29,7 @@ function App() {
         <Pace color={theme.palette.primary.light} />
         <Suspense fallback={<Fragment />}>
           <Switch>
-            <Route path="/c">
-              <Dashboard />
-            </Route>
+            <PrivateRoute path="/c" component={Dashboard} />
             <Route>
               <Home />
             </Route>
