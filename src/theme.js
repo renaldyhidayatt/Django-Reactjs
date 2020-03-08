@@ -84,17 +84,14 @@ const theme = createMuiTheme({
         borderWidth: borderWidth
       }
     },
+    MUIDataTable: {
+      resposiveScroll: {
+        maxHeight: 'none',
+      },
+    },
     MuiListItem: {
       divider: {
         borderBottom: `${borderWidth}px solid ${borderColor}`
-      }
-    },
-    MuiDialog: {
-      paper: {
-        width: "100%",
-        maxWidth: 430,
-        marginLeft: spacing,
-        marginRight: spacing
       }
     },
     MuiTooltip: {

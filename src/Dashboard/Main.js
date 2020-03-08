@@ -23,13 +23,13 @@ class Main extends PureComponent {
   render() {
     const { classes } = this.props;
     return (
-      <Fragment>
+      <>
         <Navbar />
         <main className={classNames(classes.main)}>
           <Routing
           />
         </main>
-      </Fragment>
+      </>
     );
   }
 }

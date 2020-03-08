@@ -1,7 +1,7 @@
 // Used to prevent googlebot from rendering our page as blank, should be imported first
 import React, { Fragment, Suspense, lazy } from "react";
 import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import theme from "./theme";
 import GlobalStyles from "./GlobalStyles";
 import Pace from "./Common/Pace";
@@ -35,7 +35,7 @@ function App() {
             </Route>
           </Switch>
         </Suspense>
-      </MuiThemeProvider>
+        </MuiThemeProvider>
     </BrowserRouter>
   );
 }

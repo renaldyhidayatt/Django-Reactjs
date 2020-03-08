@@ -59,7 +59,7 @@ class PageWrap extends Component{
               <Link component={MaterialLink} variant="button" color="textPrimary" className={classes.link}>
                 Enterprise
               </Link>
-              <Link component={MaterialLink} variant="button" color="textPrimary" className={classes.link}>
+              <Link to="/about" component={MaterialLink} variant="button" color="textPrimary" className={classes.link}>
                 Support
               </Link>
             </nav>

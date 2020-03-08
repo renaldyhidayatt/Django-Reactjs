@@ -10,7 +10,8 @@ urlpatterns = [
     url(r'^api/', include('rest_auth.urls')),
     url(r'^api/register/', include('rest_auth.registration.urls')),
     url(r'^account/', include('allauth.urls')),
-    url(r'^accounts-rest/registration/account-confirm-email/(?P<key>.+)/$', confirm_email, name='account_confirm_email')
+    url(r'^accounts-rest/registration/account-confirm-email/(?P<key>.+)/$', confirm_email, name='account_confirm_email'),
+    path('notesapi/', include('notesapi.urls'))
 ]
 
 if settings.DEBUG: # new

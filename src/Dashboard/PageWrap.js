@@ -23,7 +23,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import PersonIcon from "@material-ui/icons/Person";
 import { mainListItems, secondaryListItems } from './listItem';
-
+import { connect } from "react-redux";
+import { logout } from "../store/actions/auth";
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -181,7 +182,10 @@ const styles = theme => ({
 });
 
 class PageWrap extends React.Component {
-
+  static propTypes = {
+    auth: PropTypes.object.isRequired,
+    logout: PropTypes.func.isRequired
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -221,6 +225,7 @@ class PageWrap extends React.Component {
     const { classes, theme } = this.props;
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
+    const { user } = this.props.auth;
 
     return (
       <div className={classes.root}>
@@ -278,7 +283,7 @@ class PageWrap extends React.Component {
               >
                 <div className={classes.profileMenuUser}>
                   <Typography variant="h4" weight="medium">
-                    HunterRk
+                    {user ? `Welcome ${user.username}`: ""}
                   </Typography>
                   <Typography
                     className={classes.profileMenuLink}
@@ -310,13 +315,13 @@ class PageWrap extends React.Component {
                     classes.headerMenuItem
                   )}
                 >
-                  <PersonIcon className={classes.profileMenuIcon} /> Messages
+                  <PersonIcon className={classes.profileMenuIcon} onClick={this.props.logout}/> Messages
                 </MenuItem>
                 <div className={classes.profileMenuUser}>
                   <Typography
                     className={classes.profileMenuLink}
                     color="primary"
-                    onClick={this.onClickLogout}
+                    onClick={this.props.logout}
                   >
                     Sign Out
                   </Typography>
@@ -347,9 +352,13 @@ class PageWrap extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
 PageWrap.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(PageWrap)
+export default connect(mapStateToProps, { logout })(withStyles(styles, {withTheme: true})(PageWrap));

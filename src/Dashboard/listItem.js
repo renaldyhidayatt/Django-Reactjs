@@ -23,13 +23,13 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItemLink>
-    <ListItemLink to="/c">
+    <ListItemLink to="/c/table">
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItemLink>
-    <ListItemLink to="/c">
+    <ListItemLink to="/orders">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>

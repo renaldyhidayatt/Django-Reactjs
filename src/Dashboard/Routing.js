@@ -1,14 +1,20 @@
 import React, { Component } from "react";
-import { Switch } from "react-router-dom";
+import { Switch, Route,withRouter } from "react-router-dom";
 // import Dashboard from "./dashboard/Dashboard";
 import Dashboard from "./Dashboard";
+import Table from "./Table";
+import Order from "./Orders";
 import PropsRoute from "../route/PropsRoute";
 
 class Routing extends Component{
   render(){
     return(
       <Switch>
-        <PropsRoute
+		    <Route
+          path="/c/table"
+          component={Table}
+        />
+        <Route
           path=""
           component={Dashboard}
         />
@@ -18,4 +24,4 @@ class Routing extends Component{
   }
 }
 
-export default Routing;
+export default withRouter(Routing);

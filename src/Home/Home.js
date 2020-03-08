@@ -8,13 +8,11 @@ import Footer from "./Footer";
 class Home extends Component {
   render() {
     return (
-      <Fragment>
-		    <HeaderSection />
+      <>
+        <HeaderSection />
         <Pricing />
-         {/* <FeatureSection />
-         <PricingSection /> */}
-         <Footer />
-      </Fragment>
+        <Footer />
+      </>
     );
   }
 }

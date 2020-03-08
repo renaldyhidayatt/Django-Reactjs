@@ -64,7 +64,7 @@ export const login = (email, password) => dispatch => {
 
 export const logout = () => (dispatch, getState) => {
     axios
-    .post("http://localhost:8000/api/logout", null, tokenConfig(getState))
+    .post("http://localhost:8000/api/logout/", null, tokenConfig(getState))
         .then(res => {
             dispatch({
                 type: LOGOUT_SUCCESS

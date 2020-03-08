@@ -33,7 +33,7 @@ class Dashboard extends Component {
   render(){
     const { classes } = this.props;
     return(
-      <React.Fragment>
+      <>
         <main className={classes.content}>
           <div className={classes.spacer}/>
           <Container maxWidth="lg" className={classes.container}>
@@ -56,7 +56,7 @@ class Dashboard extends Component {
             </Grid>
           </Container>
         </main>
-      </React.Fragment>
+      </>
     )
   }
 }
