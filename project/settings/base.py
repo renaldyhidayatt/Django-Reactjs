@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth.registration',
     'corsheaders',
-    'users',
-    'notesapi'
+    'users'
 ]
 
 MIDDLEWARE = [
