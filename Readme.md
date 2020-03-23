@@ -49,10 +49,10 @@
 ## Tampilan-Template
 
 	Home
-	[Imgur](https://i.imgur.com/CiaJ0pU.png)
+	!(image)[https://i.imgur.com/CiaJ0pU.png]
 	
 	Login
-	[Imgur](https://i.imgur.com/EpJtQor.png)
+	!(image)[https://i.imgur.com/EpJtQor.png]
 	
 	Admin
-	[Imgur](https://i.imgur.com/dWsT8la.png)
+	!(image)[https://i.imgur.com/dWsT8la.png]
