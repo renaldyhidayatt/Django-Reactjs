@@ -47,12 +47,14 @@
 			```
 
 ## Tampilan-Template
-	Home
+Home
+
+<img src="https://i.imgur.com/CiaJ0pU.png" title="source: imgur.com" />
 	
-	<img src="https://i.imgur.com/CiaJ0pU.png" title="source: imgur.com" />
+Login
+
+<img src="https://i.imgur.com/EpJtQor.png" title="source: imgur.com" />
 	
-	Login
-	<img src="https://i.imgur.com/EpJtQor.png" title="source: imgur.com" />
-	
-	Admin
-	<img src="https://i.imgur.com/dWsT8la.png" title="source: imgur.com" />
+Admin
+
+<img src="https://i.imgur.com/dWsT8la.png" title="source: imgur.com" />
